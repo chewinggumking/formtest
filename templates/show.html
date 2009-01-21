@@ -15,7 +15,7 @@ Released   : 20081230
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Edivo Time Tracking</title>
-<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://localhost:8000/media/style.css" media="screen" />
 </head>
 <body>
 
@@ -46,16 +46,8 @@ Released   : 20081230
 			<h1 class="title">Welcome to our website </h1>
 			<p class="byline"><small>Posted by FreeCssTemplates</small></p>
 			<div class="entry">
-				<p>Put Form Here 
-					<form name = "input" action = "/show/" method = "post">
-					First name: 
-					<input type="text" name="firstname">
-					<br>
-					Last name: 
-					<input type="text" name="lastname">
-					<input type="submit" value="Submit">
-
-					</form>
+				<p>	First Name: {{f_name}}<br>
+					Last Name: {{l_name}}
 					</p>
 			</div>
 			<div class="meta">
