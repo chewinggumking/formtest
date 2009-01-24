@@ -14,8 +14,8 @@ Released   : 20081230
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Edivo Time Tracking</title>
-<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}style.css" media="screen" />
+<title>{% block title %}Edivo Time Tracking{%endblock%}</title>
+<link rel="stylesheet" type="text/css" href="http://localhost:8000/media/style.css" media="screen" />
 </head>
 <body>
 
@@ -45,7 +45,7 @@ Released   : 20081230
 		<div class="post">
 			<h1 class="title">Welcome to our website </h1>
 			<p class="byline"><small>Posted by FreeCssTemplates</small></p>
-			<div class="entry">
+			<div class="entry">{% block forms %}
 				<p>Put Form Here 
 					<form name = "input" action = "/show/" method = "post">
 					First name: 
@@ -57,15 +57,16 @@ Released   : 20081230
 
 					</form>
 					</p>
+					{% endblock %}
 			</div>
 			<div class="meta">
 				<p class="links">No Meta</p>
 			</div>
 		</div>
 		<div class="post">
-			<h2 class="title">Lorem Ipsum Dolor Volutpat</h2>
+			<h2 class="title">{%block list%}Information {% endblock %}</h2>
 			<p class="byline"><small>Posted by FreeCssTemplates</small></p>
-			<div class="entry">
+			<div class="entry">{% block content %}
 				<p>Curabitur tellus. Phasellus tellus turpis, iaculis in, faucibus lobortis, posuere in, lorem. Donec a ante. Donec neque purus, adipiscing id, eleifend a, cursus vel, odio. Vivamus varius justo sit amet leo. Morbi sed libero. Vestibulum blandit augue at mi. Praesent fermentum lectus eget diam. Nam cursus, orci sit amet porttitor iaculis, ipsum massa aliquet nulla, non elementum mi elit a mauris.</p>
 				<p>Curabitur tellus. Phasellus tellus turpis, iaculis in, faucibus lobortis, posuere in, lorem. Donec a ante. Donec neque purus, adipiscing id, eleifend a, cursus vel, odio. Vivamus varius justo sit amet leo. Morbi sed libero. Vestibulum blandit augue at mi. Praesent fermentum lectus eget diam. Nam cursus, orci sit amet porttitor iaculis, ipsum massa aliquet nulla, non elementum mi elit a mauris.</p>
 				<ul>
@@ -73,7 +74,7 @@ Released   : 20081230
 					<li><a href="#">Velit semper nisi molestie</a></li>
 					<li><a href="#">Magna lacus bibendum mauris</a></li>
 					<li><a href="#">Velit semper nisi molestie</a></li>
-				</ul>
+				</ul>{% endblock %}
 			</div>
 			<div class="meta">
 				<p class="links"><a href="#" class="comments">Comments (32)</a> &nbsp;&bull;&nbsp;&nbsp; <a href="#" class="more">Read full post &raquo;</a></p>
